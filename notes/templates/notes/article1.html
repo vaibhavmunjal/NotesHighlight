@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+<style>
+.highlight-note{
+  background-color: red;
+}
+.make-highlight{
+  background-color: red;
+}
+</style>
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+
+
+<nav id="context-menu" class="context-menu">
+  <ul class="items">
+        <li class="item">
+          <a href="#" class="action main-menu" data-action="highlight">Highlight &nbsp;&nbsp;&nbsp;&nbsp; Ctrl+Shift+H</a>
+        </li>
+        <li class="item">
+            <a href="#" class="action main-menu" data-action="note"><i class="fa fa-edit"></i>Add Note &nbsp;&nbsp;&nbsp;&nbsp;Ctrl+Shift+A</a>
+        </li>
+
+
+        <li class="item">
+          <a class="action add" data-action="add">Make note</a>
+        </li>
+
+        <li class="item">
+          <a class="action delete" data-action="delete">Delete the highlight</a>
+        </li>
+    </ul>
+
+</nav>
+
+
+
+        <!-- contenteditable="true" -->
+{% csrf_token %}
+<h1>Article Page</h1>
+
+<section>
+<p>sit amet consectetur adipisicing elit. Commodi recusandae tenetur quis <a href="" class="link">this link</a>minima vero voluptates cum ullam doloribus eaque, in maiores, illo velit? Laudantium reprehenderit perspiciatis quas officia, eum eius!</p>
+<p class="abc" data-num="2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi recusandae tenetur quis <a href="" class="link">this link</a>minima vero voluptates cum ullam doloribus eaque, in maiores, illo velit? Laudantium reprehenderit perspiciatis quas officia, eum eius!</p>
+<p class="abc" data-num="3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi recusandae tenetur quis <a href="" class="link">this link</a>minima vero voluptates cum ullam doloribus eaque, in maiores, illo velit? Laudantium reprehenderit perspiciatis quas officia, eum eius!</p>
+<p class="abc" data-num="4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi recusandae tenetur quis <a href="
+  " class="link">this link</a>minima vero <span class="highlight">voluptates cum ullam doloribus eaque, in maiores, illo velit?</span> Laudantium reprehenderit perspiciatis quas officia, eum eius!</p>
+</section>
+
+
+
+<script src="{% static 'js/highlight.js' %}"></script>
+<!-- <script src="{% static 'js/loadNotes.js' %}"></script> -->
+
+
+
+
+
+
+<span><b>vaibhav <i>munjal</b></i></b></span>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+# visual code studio
+.vscode
+
+# __pycache__
+__pycache__
+
+# compiled files
+*.pyc
+
+# project folder
+cards
